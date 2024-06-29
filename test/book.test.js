@@ -1,9 +1,8 @@
 const request = require("supertest");
-const app = require("../app"); // Adjust the path as needed
-const db = require("../db"); // Adjust the path as needed
-const Book = require("../models/book"); // Adjust the path as needed
+const app = require("../app");
+const db = require("../db");
+const Book = require("../models/book");
 
-// Helper functions to set up and tear down the test database
 async function resetTestDB() {
   await db.query("DELETE FROM books");
 }
